@@ -1,0 +1,19 @@
+{
+  "name": "api_rest_mypimes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitmario10salazarutn/api_rest_mypimes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitmario10salazarutn/api_rest_mypimes/issues"
+  },
+  "homepage": "https://github.com/gitmario10salazarutn/api_rest_mypimes#readme"
+}
