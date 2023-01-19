@@ -12,7 +12,7 @@ from decouple import config
 def connect_sqlserver(hostname, dbname, username, password):
     try:
         conexion = conn.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' +
-                                hostname + ';DATABASE=' + dbname + ';UID=' + username + ';PWD=' + password)
+                                hostname + ';DATABASE=' + dbname + ';UID=' + username + ';PWD=' + password, autocommit=True)
         print("Database connect successfully to SQL Server")
         return conexion
     except Exception as e:
