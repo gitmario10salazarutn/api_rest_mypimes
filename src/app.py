@@ -7,9 +7,9 @@ Created on Thu Nov  3 10:13:43 2022
 
 from unittest import result
 from flask import Flask, jsonify,request
-import src.database.connectdb as conn
+import database.connectdb as conn
 from config import config
-from src.routes import routes
+from routes import routes
 
 app = Flask(__name__)
 

@@ -1,4 +1,4 @@
-from src.database import connectdb as conn
+from database import connectdb as conn
 from .entities import Entities as entities
 import json
 
