@@ -20,6 +20,10 @@ def Page_Not_Found(error):
 def index():
     return '<h1>Hi, I am Mario and Who are you?</h1>'
 
+@app.route('/get')
+def get():
+    return '<h1>Hi, I am Mario and Who are you? I amm get</h1>'
+
 if __name__ == '__main__':
     app.config.from_object(config['development'])
     # Blueprints
