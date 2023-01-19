@@ -10,6 +10,7 @@ from flask import Flask, jsonify,request
 import database.connectdb as conn
 from config import config
 from routes import routes
+from models.Model import Model as model
 
 app = Flask(__name__)
 
@@ -23,6 +24,18 @@ def index():
 @app.route('/get')
 def get():
     return '<h1>Hi, I am Mario and Who are you? I amm get</h1>'
+
+# GET ALL
+@app.route('/get_clientes', methods =['GET'])
+def get_clientes():
+    try:
+        clientes = model.get_clientes()
+        if clientes is None:
+            return jsonify({'message': 'Data not found!'}), 404
+        else:
+            return clientes[0]
+    except Exception as ex:
+        return jsonify({'message': 'Error {0}'.format(ex)}), 500
 
 if __name__ == '__main__':
     app.config.from_object(config['development'])
