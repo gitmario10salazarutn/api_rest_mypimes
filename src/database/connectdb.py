@@ -21,10 +21,10 @@ def connect_sqlserver(hostname, dbname, username, password):
 def get_connection():
     try:
         return connect_sqlserver(
-            config('HOST'),
-            config('DB'),
-            config('USER'),
-            config('PASS')
+            "mssql-105974-0.cloudclusters.net,10223",
+            "appmario",
+            "mario10salazar",
+            "k3:R}QEP/Aeqc_yp?}!^@L30o"
         )
     except Exception as ex:
         raise ex
