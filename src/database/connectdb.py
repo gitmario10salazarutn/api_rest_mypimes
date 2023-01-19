@@ -5,6 +5,7 @@ Created on Thu Nov  3 10:15:31 2022
 @author: Mario
 """
 
+
 import pyodbc as conn
 from decouple import config
 
@@ -21,10 +22,10 @@ def connect_sqlserver(hostname, dbname, username, password):
 def get_connection():
     try:
         return connect_sqlserver(
-            "mssql-105974-0.cloudclusters.net,10223",
-            "appmario",
-            "mario10salazar",
-            "k3:R}QEP/Aeqc_yp?}!^@L30o"
+            config('HOST'),
+            config('DB'),
+            config('USER'),
+            config('PASS')
         )
     except Exception as ex:
         raise ex

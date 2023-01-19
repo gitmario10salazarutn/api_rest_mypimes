@@ -37,6 +37,8 @@ def get_clientes():
     except Exception as ex:
         return jsonify({'message': 'Error {0}'.format(ex)}), 500
 
+
+
 if __name__ == '__main__':
     app.config.from_object(config['development'])
     # Blueprints

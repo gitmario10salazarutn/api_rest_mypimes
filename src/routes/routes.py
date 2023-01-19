@@ -9,8 +9,8 @@ def get():
 
 
 # GET ALL
-@main.route('/get_clientes', methods =['GET'])
-def get_clientes():
+@main.route('/get_cliente', methods =['GET'])
+def get_cliente():
     try:
         clientes = model.get_clientes()
         if clientes is None:
